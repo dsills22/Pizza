@@ -294,33 +294,20 @@
                 android:layout_marginTop="31dp"
                 android:layout_gravity="center_horizontal" />
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
+            <Button
+                style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pizzas"
-                android:id="@+id/lblPizzas" />
+                android:text="Review Order"
+                android:id="@+id/btnReview"
+                android:layout_below="@+id/adapterViewFlipper"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal" />
 
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"></TableLayout>
         </LinearLayout>
 
-    </ViewFlipper>
+        <include android:id="@+id/reviewLayout" layout="@layout/review" />
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Review Order"
-        android:id="@+id/btnReview"
-        android:layout_below="@+id/adapterViewFlipper"
-        android:layout_centerHorizontal="true" />
+    </ViewFlipper>
 
 </RelativeLayout>
