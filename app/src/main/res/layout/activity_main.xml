@@ -16,8 +16,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true">
+        android:layout_alignParentBottom="true">
 
         <LinearLayout
             android:orientation="vertical"
@@ -53,31 +52,35 @@
                     <RadioGroup
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:id="@+id/grpPizza">
 
                         <RadioButton
-                            android:text="Small ($5)"
+                            android:text="Small $5"
                             android:id="@+id/btnSmallPizza"
                             android:checked="false"
                             android:layout_column="0"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:textSize="15dp" />
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Medium ($10)"
+                            android:text="Medium $10"
                             android:id="@+id/btnMedPizza"
                             android:checked="false"
-                            android:layout_column="2" />
+                            android:layout_column="2"
+                            android:textSize="15dp" />
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Large ($15)"
+                            android:text="Large $15"
                             android:id="@+id/btnLargePizza"
                             android:checked="false"
-                            android:layout_column="7" />
+                            android:layout_column="7"
+                            android:textSize="15dp" />
 
                     </RadioGroup>
                 </TableRow>
@@ -104,28 +107,31 @@
                     android:layout_height="match_parent" >
 
                     <CheckBox
-                        android:text="Tomato ($0)"
+                        android:text="Tomato $0"
                         android:id="@+id/ckTomato"
                         android:layout_column="0"
                         android:checked="false"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp" />
 
                     <CheckBox
-                        android:text="Cheese ($0)"
+                        android:text="Cheese $0"
                         android:id="@+id/ckCheese"
                         android:layout_column="1"
                         android:checked="false"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp" />
 
                     <CheckBox
-                        android:text="Peppers ($0)"
+                        android:text="Peppers $0"
                         android:id="@+id/ckPeppers"
                         android:layout_column="2"
                         android:checked="false"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp" />
                 </TableRow>
 
                 <TableRow
@@ -145,28 +151,31 @@
                     android:layout_height="match_parent" >
 
                     <CheckBox
-                        android:text="Onions ($0)"
+                        android:text="Onions $0"
                         android:id="@+id/ckOnions"
                         android:layout_column="0"
                         android:checked="false"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp" />
 
                     <CheckBox
-                        android:text="Sausage ($1)"
+                        android:text="Sausage $1"
                         android:id="@+id/ckSausage"
                         android:layout_column="1"
                         android:checked="false"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp" />
 
                     <CheckBox
-                        android:text="Ham ($1)"
+                        android:text="Ham $1"
                         android:id="@+id/ckHam"
                         android:layout_column="2"
                         android:checked="false"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp" />
                 </TableRow>
 
                 <TableRow
@@ -182,12 +191,13 @@
                     android:layout_height="match_parent" >
 
                     <CheckBox
-                        android:text="Chicken ($1)"
+                        android:text="Chicken $1"
                         android:id="@+id/ckChicken"
                         android:layout_column="0"
                         android:checked="false"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp" />
                 </TableRow>
             </TableLayout>
 
@@ -215,28 +225,32 @@
                     android:layout_height="match_parent">
 
                     <RadioGroup android:layout_column="0"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:id="@+id/grpDrinkSize">
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Small ($2)"
+                            android:text="Small $2"
                             android:id="@+id/btnSmallDr"
-                            android:checked="false" />
+                            android:checked="false"
+                            android:textSize="15dp" />
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Medium ($3)"
+                            android:text="Medium $3"
                             android:id="@+id/btnMedDr"
-                            android:checked="false" />
+                            android:checked="false"
+                            android:textSize="15dp" />
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Large ($4)"
+                            android:text="Large $4"
                             android:id="@+id/btnLargeDr"
-                            android:checked="false" />
+                            android:checked="false"
+                            android:textSize="15dp" />
                     </RadioGroup>
                 </TableRow>
             </TableLayout>
@@ -252,57 +266,66 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.03"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:id="@+id/grpDrink">
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Coke"
                     android:id="@+id/btnCoke"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:textSize="15dp" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="7-Up"
                     android:id="@+id/btn7"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:textSize="15dp" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Orange Cola"
                     android:id="@+id/btnOC"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:textSize="15dp" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Cherry Cola"
                     android:id="@+id/btnCC"
-                    android:checked="false" />
+                    android:checked="false"
+                    android:textSize="15dp" />
             </RadioGroup>
 
             <Button
                 style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="Add Drink"
                 android:id="@+id/btnAddDrink"
                 android:layout_below="@+id/adapterViewFlipper"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="31dp"
+                android:layout_column="23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.03"
                 android:layout_gravity="center_horizontal" />
 
             <Button
                 style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="Review Order"
                 android:id="@+id/btnReview"
                 android:layout_below="@+id/adapterViewFlipper"
                 android:layout_centerHorizontal="true"
-                android:layout_gravity="center_horizontal" />
+                android:layout_gravity="center_horizontal"
+                android:layout_column="23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.03" />
 
         </LinearLayout>
 

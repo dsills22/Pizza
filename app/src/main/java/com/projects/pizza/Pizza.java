@@ -1,5 +1,4 @@
 package com.projects.pizza;
-import android.view.View;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -8,10 +7,10 @@ import java.util.Map;
 /**
  * Created by devin on 7/8/16.
  */
-public class Pizza {
+public class Pizza extends Item {
     private static final Map<String, Double> ToppingPrice;
     static {
-        ToppingPrice = new HashMap<String, Double>();
+        ToppingPrice = new HashMap<String, Double>(); //map toppings to prices
         ToppingPrice.put("Tomato", 0.0);
         ToppingPrice.put("Cheese", 0.0);
         ToppingPrice.put("Peppers", 0.0);
@@ -21,7 +20,7 @@ public class Pizza {
         ToppingPrice.put("Chicken", 1.0);
     }
 
-    private static final Map<String, Double> SizePrice;
+    private static final Map<String, Double> SizePrice; //map sizes to prices
     static {
         SizePrice = new HashMap<String, Double>();
         SizePrice.put("Small", 5.0);
@@ -29,9 +28,6 @@ public class Pizza {
         SizePrice.put("Large", 15.0);
     }
 
-    private Integer removeBtnId;
-    private Integer rowId;
-    private Double price;
     private String toppingsDisplay;
     private ArrayList<String> toppingsArr;
     private String size;
@@ -54,38 +50,22 @@ public class Pizza {
 
             if(this.toppingsArr.size() > 0) {
                 this.toppingsDisplay = this.toppingsDisplay.substring(1); //chomp first comma
-                this.toppingsDisplay = this.toppingsDisplay;
             } else {
                 this.toppingsDisplay = "plain";
             }
 
-            this.removeBtnId = Util.newId();
-            this.rowId = Util.newId();
+            this.removeBtnId = Util.newId(); //store an id that will be associated with the button to remove this pizza on review screen
+            this.rowId = Util.newId(); //store id that will be associated with the row this pizza is in on the review screen
         }
     }
 
-    public Integer getRemoveBtnId() {
-        return removeBtnId;
+    //getters, setters
+    public String getToppingsDisplay() {
+        return toppingsDisplay;
     }
 
-    public void setRemoveBtnId(Integer removeBtnId) {
-        this.removeBtnId = removeBtnId;
-    }
-
-    public Integer getRowId() {
-        return rowId;
-    }
-
-    public void setRowId(Integer rowId) {
-        this.rowId = rowId;
-    }
-
-    public Double getPrice() {
-        return price;
-    }
-
-    public void setPrice(Double price) {
-        this.price = price;
+    public void setToppingsDisplay(String toppingsDisplay) {
+        this.toppingsDisplay = toppingsDisplay;
     }
 
     public ArrayList<String> getToppingsArr() {
@@ -94,14 +74,6 @@ public class Pizza {
 
     public void setToppingsArr(ArrayList<String> toppingsArr) {
         this.toppingsArr = toppingsArr;
-    }
-
-    public String getToppingsDisplay() {
-        return toppingsDisplay;
-    }
-
-    public void setToppingsDisplay(String toppingsDisplay) {
-        this.toppingsDisplay = toppingsDisplay;
     }
 
     public String getSize() {
