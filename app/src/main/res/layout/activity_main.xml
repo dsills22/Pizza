@@ -57,7 +57,7 @@
 
                         <RadioButton
                             android:text="Small ($5)"
-                            android:id="@+id/radioButton"
+                            android:id="@+id/btnSmallPizza"
                             android:checked="false"
                             android:layout_column="0"
                             android:layout_width="wrap_content"
@@ -67,7 +67,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Medium ($10)"
-                            android:id="@+id/radioButton2"
+                            android:id="@+id/btnMedPizza"
                             android:checked="false"
                             android:layout_column="2" />
 
@@ -75,7 +75,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Large ($15)"
-                            android:id="@+id/radioButton3"
+                            android:id="@+id/btnLargePizza"
                             android:checked="false"
                             android:layout_column="7" />
 
@@ -105,7 +105,7 @@
 
                     <CheckBox
                         android:text="Tomato ($0)"
-                        android:id="@+id/checkBox8"
+                        android:id="@+id/ckTomato"
                         android:layout_column="0"
                         android:checked="false"
                         android:layout_width="wrap_content"
@@ -113,7 +113,7 @@
 
                     <CheckBox
                         android:text="Cheese ($0)"
-                        android:id="@+id/checkBox9"
+                        android:id="@+id/ckCheese"
                         android:layout_column="1"
                         android:checked="false"
                         android:layout_width="wrap_content"
@@ -121,7 +121,7 @@
 
                     <CheckBox
                         android:text="Peppers ($0)"
-                        android:id="@+id/checkBox10"
+                        android:id="@+id/ckPeppers"
                         android:layout_column="2"
                         android:checked="false"
                         android:layout_width="wrap_content"
@@ -146,7 +146,7 @@
 
                     <CheckBox
                         android:text="Onions ($0)"
-                        android:id="@+id/checkBox11"
+                        android:id="@+id/ckOnions"
                         android:layout_column="0"
                         android:checked="false"
                         android:layout_width="wrap_content"
@@ -154,7 +154,7 @@
 
                     <CheckBox
                         android:text="Sausage ($1)"
-                        android:id="@+id/checkBox12"
+                        android:id="@+id/ckSausage"
                         android:layout_column="1"
                         android:checked="false"
                         android:layout_width="wrap_content"
@@ -162,7 +162,7 @@
 
                     <CheckBox
                         android:text="Ham ($1)"
-                        android:id="@+id/checkBox13"
+                        android:id="@+id/ckHam"
                         android:layout_column="2"
                         android:checked="false"
                         android:layout_width="wrap_content"
@@ -183,7 +183,7 @@
 
                     <CheckBox
                         android:text="Chicken ($1)"
-                        android:id="@+id/checkBox14"
+                        android:id="@+id/ckChicken"
                         android:layout_column="0"
                         android:checked="false"
                         android:layout_width="wrap_content"
