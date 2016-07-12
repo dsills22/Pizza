@@ -19,13 +19,15 @@ public class Drink extends Item {
     private String size;
 
     public Drink() {}
-    public Drink(String size, String type) {
+    public Drink(String size, String type, Integer index) {
         if(size != null && type != null) {
             this.size = size;
+            this.index = index;
             this.type = type;
             this.price = SizePrice.get(this.size);
             this.removeBtnId = Util.newId(); //store an id that will be associated with the button to remove this drink on review screen
             this.rowId = Util.newId(); //store id that will be associated with the row this drink is in on the review screen
+            this.updateBtnId = Util.newId();
         }
     }
 

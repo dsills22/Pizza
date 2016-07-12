@@ -2,6 +2,7 @@ package com.projects.pizza;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.support.v7.app.AlertDialog;
 import android.widget.ImageButton;
 
@@ -35,11 +36,28 @@ public class Util {
                 .show();
     }
 
+    public static ImageButton imageSetup(ImageButton imageBtn) {
+        //imageBtn.setPadding(15, 0, 0, 0); //pad left a bit
+        imageBtn.setBackgroundDrawable(null);
+        imageBtn.setBackgroundColor(Color.TRANSPARENT);
+        imageBtn.setScaleX(0.7f);
+        imageBtn.setScaleY(0.7f);
+        return imageBtn;
+    }
+
     public static ImageButton createRemoveButton(Context context, Item item) {
         ImageButton imageBtn = new ImageButton(context); //create remove drink button
         imageBtn.setId(item.getRemoveBtnId()); //set id
         imageBtn.setImageResource(R.mipmap.remove_pizza); //set image resource
-        imageBtn.setPadding(15, 0, 0, 0); //pad left a bit
+        imageBtn = imageSetup(imageBtn);
+        return imageBtn;
+    }
+
+    public static ImageButton createUpdateButton(Context context, Item item) {
+        ImageButton imageBtn = new ImageButton(context); //create remove drink button
+        imageBtn.setId(item.getUpdateBtnId()); //set id
+        imageBtn.setImageResource(R.mipmap.update); //set image resource
+        imageBtn = imageSetup(imageBtn);
         return imageBtn;
     }
 }

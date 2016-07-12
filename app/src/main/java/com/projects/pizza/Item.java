@@ -7,6 +7,8 @@ public class Item {
     public Integer removeBtnId;
     public Integer rowId;
     public Double price;
+    public Integer updateBtnId;
+    public Integer index;
 
     public Integer getRemoveBtnId() {
         return removeBtnId;
@@ -30,5 +32,21 @@ public class Item {
 
     public void setPrice(Double price) {
         this.price = price;
+    }
+
+    public Integer getUpdateBtnId() {
+        return updateBtnId;
+    }
+
+    public void setUpdateBtnId(Integer updateBtnId) {
+        this.updateBtnId = updateBtnId;
+    }
+
+    public Integer getIndex() {
+        return index;
+    }
+
+    public void setIndex(Integer index) {
+        this.index = index;
     }
 }

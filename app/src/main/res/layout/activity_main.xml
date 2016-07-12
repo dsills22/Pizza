@@ -9,328 +9,341 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.projects.pizza.MainActivity">
 
-    <ViewFlipper
+    <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/adapterViewFlipper"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true">
+        android:id="@+id/scrollView2" >
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:weightSum="1"
-            android:id="@+id/linearLayout2"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true">
+        <ViewFlipper
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/adapterViewFlipper"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true">
 
-            <TableLayout
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_weight="0.03" >
+                android:layout_height="match_parent"
+                android:weightSum="1"
+                android:id="@+id/linearLayout2"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true">
 
-                <TableRow
+                <TableLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.03" >
 
-                    <TextView
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-                        android:text="Pizza Size"
-                        android:id="@+id/lblSize"
-                        android:layout_column="0" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
-
-                    <RadioGroup
+                    <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:id="@+id/grpPizza">
+                        android:layout_height="match_parent">
 
-                        <RadioButton
-                            android:text="Small $5"
-                            android:id="@+id/btnSmallPizza"
-                            android:checked="false"
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="Pizza Size"
+                            android:id="@+id/lblSize"
+                            android:layout_column="0" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:id="@+id/grpPizza">
+
+                            <RadioButton
+                                android:text="Small $5"
+                                android:id="@+id/btnSmallPizza"
+                                android:checked="false"
+                                android:layout_column="0"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Medium $10"
+                                android:id="@+id/btnMedPizza"
+                                android:checked="false"
+                                android:layout_column="2"
+                                android:textSize="15dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Large $15"
+                                android:id="@+id/btnLargePizza"
+                                android:checked="false"
+                                android:layout_column="7"
+                                android:textSize="15dp" />
+
+                        </RadioGroup>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Toppings"
+                            android:id="@+id/lblTop"
+                            android:layout_column="0" />
+                    </TableRow>
+                </TableLayout>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <CheckBox
+                            android:text="Tomato $0"
+                            android:id="@+id/ckTomato"
                             android:layout_column="0"
+                            android:checked="false"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="15dp" />
 
-                        <RadioButton
+                        <CheckBox
+                            android:text="Cheese $0"
+                            android:id="@+id/ckCheese"
+                            android:layout_column="1"
+                            android:checked="false"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Medium $10"
-                            android:id="@+id/btnMedPizza"
-                            android:checked="false"
+                            android:textSize="15dp" />
+
+                        <CheckBox
+                            android:text="Peppers $0"
+                            android:id="@+id/ckPeppers"
                             android:layout_column="2"
-                            android:textSize="15dp" />
-
-                        <RadioButton
+                            android:checked="false"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Large $15"
-                            android:id="@+id/btnLargePizza"
-                            android:checked="false"
-                            android:layout_column="7"
                             android:textSize="15dp" />
+                    </TableRow>
 
-                    </RadioGroup>
-                </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Toppings"
-                        android:id="@+id/lblTop"
-                        android:layout_column="0" />
-                </TableRow>
-            </TableLayout>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
 
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
-
-                    <CheckBox
-                        android:text="Tomato $0"
-                        android:id="@+id/ckTomato"
-                        android:layout_column="0"
-                        android:checked="false"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="15dp" />
-
-                    <CheckBox
-                        android:text="Cheese $0"
-                        android:id="@+id/ckCheese"
-                        android:layout_column="1"
-                        android:checked="false"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="15dp" />
-
-                    <CheckBox
-                        android:text="Peppers $0"
-                        android:id="@+id/ckPeppers"
-                        android:layout_column="2"
-                        android:checked="false"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="15dp" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
-
-                    <CheckBox
-                        android:text="Onions $0"
-                        android:id="@+id/ckOnions"
-                        android:layout_column="0"
-                        android:checked="false"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="15dp" />
-
-                    <CheckBox
-                        android:text="Sausage $1"
-                        android:id="@+id/ckSausage"
-                        android:layout_column="1"
-                        android:checked="false"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="15dp" />
-
-                    <CheckBox
-                        android:text="Ham $1"
-                        android:id="@+id/ckHam"
-                        android:layout_column="2"
-                        android:checked="false"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="15dp" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
-
-                    <CheckBox
-                        android:text="Chicken $1"
-                        android:id="@+id/ckChicken"
-                        android:layout_column="0"
-                        android:checked="false"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="15dp" />
-                </TableRow>
-            </TableLayout>
-
-            <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Add Pizza"
-                android:id="@+id/btnAddPizza"
-                android:layout_gravity="center_horizontal" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Drink Size"
-                android:id="@+id/lblDrinkSize"
-                android:layout_weight="0.03" />
-
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="30dp">
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <RadioGroup android:layout_column="0"
-                        android:orientation="horizontal"
-                        android:id="@+id/grpDrinkSize">
-
-                        <RadioButton
+                        <CheckBox
+                            android:text="Onions $0"
+                            android:id="@+id/ckOnions"
+                            android:layout_column="0"
+                            android:checked="false"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Small $2"
-                            android:id="@+id/btnSmallDr"
-                            android:checked="false"
                             android:textSize="15dp" />
 
-                        <RadioButton
+                        <CheckBox
+                            android:text="Sausage $1"
+                            android:id="@+id/ckSausage"
+                            android:layout_column="1"
+                            android:checked="false"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Medium $3"
-                            android:id="@+id/btnMedDr"
-                            android:checked="false"
                             android:textSize="15dp" />
 
-                        <RadioButton
+                        <CheckBox
+                            android:text="Ham $1"
+                            android:id="@+id/ckHam"
+                            android:layout_column="2"
+                            android:checked="false"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Large $4"
-                            android:id="@+id/btnLargeDr"
-                            android:checked="false"
                             android:textSize="15dp" />
-                    </RadioGroup>
-                </TableRow>
-            </TableLayout>
+                    </TableRow>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Drink"
-                android:id="@+id/lblDrink"
-                android:layout_weight="0.03" />
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
 
-            <RadioGroup
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.03"
-                android:orientation="horizontal"
-                android:id="@+id/grpDrink">
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
 
-                <RadioButton
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <CheckBox
+                            android:text="Chicken $1"
+                            android:id="@+id/ckChicken"
+                            android:layout_column="0"
+                            android:checked="false"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="15dp" />
+                    </TableRow>
+                </TableLayout>
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Coke"
-                    android:id="@+id/btnCoke"
-                    android:checked="false"
-                    android:textSize="15dp" />
+                    android:text="Add Pizza"
+                    android:id="@+id/btnAddPizza"
+                    android:layout_gravity="center_horizontal" />
 
-                <RadioButton
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="7-Up"
-                    android:id="@+id/btn7"
-                    android:checked="false"
-                    android:textSize="15dp" />
+                    android:text="Drink Size"
+                    android:id="@+id/lblDrinkSize"
+                    android:layout_weight="0.03" />
 
-                <RadioButton
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RadioGroup android:layout_column="0"
+                            android:orientation="horizontal"
+                            android:id="@+id/grpDrinkSize">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Small $2"
+                                android:id="@+id/btnSmallDr"
+                                android:checked="false"
+                                android:textSize="15dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Medium $3"
+                                android:id="@+id/btnMedDr"
+                                android:checked="false"
+                                android:textSize="15dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Large $4"
+                                android:id="@+id/btnLargeDr"
+                                android:checked="false"
+                                android:textSize="15dp" />
+                        </RadioGroup>
+                    </TableRow>
+                </TableLayout>
+
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Orange Cola"
-                    android:id="@+id/btnOC"
-                    android:checked="false"
-                    android:textSize="15dp" />
+                    android:text="Drink"
+                    android:id="@+id/lblDrink"
+                    android:layout_weight="0.03" />
 
-                <RadioButton
+                <RadioGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Cherry Cola"
-                    android:id="@+id/btnCC"
-                    android:checked="false"
-                    android:textSize="15dp" />
-            </RadioGroup>
+                    android:layout_weight="0.03"
+                    android:orientation="horizontal"
+                    android:id="@+id/grpDrink">
 
-            <Button
-                style="?android:attr/buttonStyleSmall"
-                android:text="Add Drink"
-                android:id="@+id/btnAddDrink"
-                android:layout_below="@+id/adapterViewFlipper"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="31dp"
-                android:layout_column="23"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.03"
-                android:layout_gravity="center_horizontal" />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Coke"
+                        android:id="@+id/btnCoke"
+                        android:checked="false"
+                        android:textSize="15dp" />
 
-            <Button
-                style="?android:attr/buttonStyleSmall"
-                android:text="Review Order"
-                android:id="@+id/btnReview"
-                android:layout_below="@+id/adapterViewFlipper"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="center_horizontal"
-                android:layout_column="23"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.03" />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="7-Up"
+                        android:id="@+id/btn7"
+                        android:checked="false"
+                        android:textSize="15dp" />
 
-        </LinearLayout>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Orange Cola"
+                        android:id="@+id/btnOC"
+                        android:checked="false"
+                        android:textSize="15dp" />
 
-        <include android:id="@+id/reviewLayout" layout="@layout/review" />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cherry Cola"
+                        android:id="@+id/btnCC"
+                        android:checked="false"
+                        android:textSize="15dp" />
+                </RadioGroup>
 
-    </ViewFlipper>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="144dp">
+
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:text="Add Drink"
+                        android:id="@+id/btnAddDrink"
+                        android:layout_column="23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.03"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true" />
+
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:text="Review Order"
+                        android:id="@+id/btnReview"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_column="23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.03"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <include android:id="@+id/reviewLayout" layout="@layout/review" />
+            <include android:id="@+id/reviewLayout" layout="@layout/update_drink" />
+            <include android:id="@+id/reviewLayout" layout="@layout/update_pizza" />
+
+        </ViewFlipper>
+    </ScrollView>
 
 </RelativeLayout>

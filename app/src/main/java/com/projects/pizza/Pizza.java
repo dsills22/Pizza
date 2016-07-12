@@ -33,11 +33,12 @@ public class Pizza extends Item {
     private String size;
 
     public Pizza() {}
-    public Pizza(String size, ArrayList<String> toppingsArr) {
+    public Pizza(String size, ArrayList<String> toppingsArr, Integer index) {
         if(size != null) {
             if(toppingsArr == null) {
                 toppingsArr = new ArrayList<String>();
             }
+            this.index = index;
             this.size = size;
             this.toppingsArr = toppingsArr;
             this.price = 0.0;
@@ -54,6 +55,7 @@ public class Pizza extends Item {
                 this.toppingsDisplay = "plain";
             }
 
+            this.updateBtnId = Util.newId();
             this.removeBtnId = Util.newId(); //store an id that will be associated with the button to remove this pizza on review screen
             this.rowId = Util.newId(); //store id that will be associated with the row this pizza is in on the review screen
         }
