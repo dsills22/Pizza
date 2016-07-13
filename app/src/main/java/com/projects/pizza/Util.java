@@ -36,6 +36,17 @@ public class Util {
                 .show();
     }
 
+    public static void purchaseMsg(Context context) { //convenience method to show an error msg
+        new AlertDialog.Builder(context)
+                .setTitle("Thank You!")
+                .setMessage("Your order will arrive soon")
+                .setNeutralButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {}
+                })
+                .setIcon(R.mipmap.pizza)
+                .show();
+    }
+
     public static ImageButton imageSetup(ImageButton imageBtn) {
         //imageBtn.setPadding(15, 0, 0, 0); //pad left a bit
         imageBtn.setBackgroundDrawable(null);

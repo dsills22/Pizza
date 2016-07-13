@@ -327,6 +327,19 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+        //purchase action
+        purchase.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Util.purchaseMsg(MainActivity.this);
+                resetDrink();
+                resetPizza();
+                pizzaList.clear();
+                drinkList.clear();
+                viewFlipper.setDisplayedChild(MAINVIEW);
+            }
+        });
+
+
         //after rendering, find largest view id so we can add new views dynamically and set their id via Util.newId
         Integer maxId = 0;
         View v = findViewById(++maxId);
